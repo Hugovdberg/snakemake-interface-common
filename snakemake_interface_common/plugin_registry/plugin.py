@@ -208,7 +208,7 @@ class PluginBase(ABC):
 
         def get_name_and_value(field):
             # This is the actual field name without the prefix
-            prefixed_name = self._get_prefixed_name(thefield.name).replace("-", "_")
+            prefixed_name = self._get_prefixed_name(field.name).replace("-", "_")
             value = getattr(args, prefixed_name)
             return field.name, value
 
